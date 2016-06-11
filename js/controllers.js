@@ -27,6 +27,10 @@ weatherForecastApp.controller('forecastController', ['$scope', '$routeParams', '
 		return Math.round(1.8 * (degK - 273) + 32);
 	}
 
+	$scope.convertToCelsius = function(degK) {
+		return Math.round(degK - 273.15);
+	}
+
 	$scope.convertToDate = function(dt) {
 		return new Date(dt * 1000);
 	}
